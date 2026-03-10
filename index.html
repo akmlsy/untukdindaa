@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayyi Din</title></title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(120deg,#000000,#000000dd,#000000ce,#000000dd);
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+margin:0;
+overflow:hidden;
+color:rgb(118, 85, 85);
+}
+
+.card{
+background:#0000003b;
+padding:10px;
+border-radius:10px;
+text-align: center;
+box-shadow:0 10px 25px rgba(196, 82, 82, 0.868);
+max-width:300px;
+z-index:2;
+}
+
+h1{
+color:rgba(180, 95, 95, 0.795);
+}
+
+img{
+width:50%;
+border-radius:15px;
+margin-bottom:15px;
+transform: rotate(0deg);
+}
+
+button{
+background:black;
+color:rgb(105, 47, 47);
+border:1px solid rgb(0, 0, 0);
+padding:12px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:white;
+color:black;
+}
+
+.credit{
+margin-top:15px;
+font-size:14px;
+color:#000000;
+}
+
+/* animasi hati */
+
+.heart{
+position:absolute;
+color:(pink);
+font-size:20000px;
+animation:fall 9s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="fotod.jpeg">
+
+<h1>Joyeux anniversaire    
+belle dinda 🥳</h1>
+
+<p>
+"Semoga panjang umur, sehat selalu,
+dan semoga semua yang kamu semogakan
+akan tersemogakan, WYATB!"
+</p>
+
+<p>
+"Tetaplah jadi orang yang selalu
+membawa senyum untuk banyak orang"
+</p>
+
+<p>
+"Semoga disegerakan dapat jodoh yaa supaya ga galau muluu" 🥺🥺🥺
+</p>
+
+<button onclick="playSong()">Putar Lagu 🎧</button>
+
+<p class="credit">
+Dari Akmal🖤.<br>
+</p>
+
+<audio id="niki">
+<source src="niki.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+function playSong(){
+document.getElementById("niki").play();
+}
+
+/* membuat hujan hati */
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💗";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
